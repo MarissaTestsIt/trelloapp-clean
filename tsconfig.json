@@ -1,12 +1,16 @@
 {
   "compilerOptions": {
+    "outDir": "./built",
     "target": "es5",
     "lib": ["es5", "dom"],
-    "types": ["cypress", "cypress-real-events", "node"],
+    "types": ["cypress", "node"],
     "allowJs": true,
     "baseUrl": "./"
   },
   "include": [
-    "**/*.ts"
-  ]
+    "./**/*"
+  ],
+  "exclude": [
+    "./built/**/*"
+]
 }

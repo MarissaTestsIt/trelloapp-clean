@@ -7,42 +7,35 @@ module.exports = {
   extends: 'eslint:recommended',
   parserOptions: {
     ecmaVersion: 11,
-    sourceType: 'module'
+    sourceType: 'module',
   },
-  plugins: [
-    'vue',
-  ],
+  plugins: ['vue'],
   rules: {
     'comma-spacing': ['error', { before: false, after: true }],
     'space-infix-ops': 'error',
     'key-spacing': ['error', { afterColon: true }],
     'arrow-spacing': ['error', { before: true, after: true }],
-    indent: [
-      'error',
-      2,
-    ],
-    'linebreak-style': [
-      'error',
-      'unix',
-    ],
-    quotes: [
-      'error',
-      'single',
-    ],
-    semi: [
-      'error',
-      'always',
-    ],
+    'newline-per-chained-call': [1],
+    indent: ['error', 2],
+    'linebreak-style': ['error', 'windows'],
+    quotes: ['error', 'single'],
+    semi: ['error', 'always'],
     'no-multiple-empty-lines': [
-      'error', {
+      'error',
+      {
         max: 1,
         maxEOF: 1,
       },
     ],
     'padding-line-between-statements': [
-      'error', { blankLine: 'always', prev: 'multiline-block-like', next: 'multiline-block-like' },
+      'error',
+      {
+        blankLine: 'always',
+        prev: 'multiline-block-like',
+        next: 'multiline-block-like',
+      },
     ],
     'no-console': 'off',
-    'no-undef': 'off'
+    'no-undef': 'off',
   },
 };
