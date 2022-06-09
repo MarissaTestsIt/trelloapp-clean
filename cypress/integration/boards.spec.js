@@ -3,7 +3,7 @@ const { faker } = require('@faker-js/faker')
 
 const boardName = faker.word.noun()
 
-describe('board creation', () => {
+describe('board  creation', () => {
 
   beforeEach(() => {
     cy.request({
