@@ -83,5 +83,84 @@ describe('board creation', () => {
       .should('be.visible')
 
   })
+})
+
+describe('starred boards', () => {
+  // beforeEach(() => {
+  //   cy
+  //     .intercept({
+  //       method: 'GET',
+  //       url: '/api/boards'
+  //     }, {
+  //       fixture: 'someBoards.json'
+  //     }).as('boardList')
+  // })
+
+  it.only('can star a board', () => {
+    cy
+      .intercept({
+        method: 'GET',
+        url: '/api/boards'
+      }, {
+        fixture: 'someBoards.json'
+      }).as('boardList')
+
+    cy
+      .visit('/')
+
+    cy.wait('@boardList').then((result) => {
+      console.log(result.response.body)
+      expect(result.response.body[0]).to.have.property('')
+    })
+
+    // cy.wait('@boardList')
+
+    // cy
+    //   .get('[data-cy=star]')
+    //   .first()
+    //   .invoke('show')
+    //   .click()
+
+    // cy.wait('@boardList').then((result) => {
+    //   cy
+    //     .get('[data-cy=star]')
+    //     .first()
+    //     .invoke('show')
+    //     .click()
+
+    //   //expect(result.response.body['starred']).to.be.true
+    // }
+    // )
+
+    // cy.wait('@boardList').then((board) => {
+    //   board
+    //     .get('[data-cy=star]')
+    //     .first()
+    //     .invoke('show')
+    //     .click()
+
+    //cy.get('@boardList')
+
+    //expect(board.response.body).to.exist
+    //})
+
+  })
+
+  it('adds a board to My Starred section', () => {
+    cy
+      .visit('/')
+
+    cy
+      .get
+
+  })
+
+  it('remains in My Boards when a board is also starred', () => {
+
+  })
+
+  it('can be removed from My Starred section', () => {
+
+  })
 
 })
